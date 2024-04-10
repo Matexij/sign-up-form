@@ -3,10 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta ref="stylesheet" src="style.css"></meta>
+    <link rel="stylesheet" href="style.css">
     <title>Sign up form</title>
 </head>
 <body>
-    
+<div class="image">
+    <div class="logo">
+        <img src="logo.png" alt="">
+        ODIN
+    </div>
+</div>
+<div class="main">
+    <p>
+        This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. <br />
+        Sign up <i>now</i> to get started
+    </p>
+    <p>You <i>know</i> you want to.</p>
+    <form action="post">
+        <div class="formSection">
+            <h3>Let's do this!</h3>    
+            <div><label for="firstName">FIRST NAME</label><input id="firstName" type="text"></div>
+            <div><label for="lastName">LAST NAME</label><input id="lastName" type="text"></div>
+            <div><label for="email">EMAIL</label><input id="email" type="email"></div>
+            <div><label for="phoneNumber">PHONE NUMBER</label><input id="phoneNumber" type="tel"></div>
+            <div>
+                <label for="password">PASSWORD</label>
+                <input id="password" type="password" oninput="passwordsMatch()">
+                <div id="passwordError">* Passwords do not match</div>
+            </div>
+            <div><label for="passwordAgain">CONFIRM PASSWORD</label><input id="passwordAgain" type="password" oninput="passwordsMatch()"></div>
+        </div>
+        <submit class="btn">Create Account</submit>
+    </form>
+    <p>Already have an accout? <a href="">Log in    </a></p>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

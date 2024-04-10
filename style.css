@@ -1,4 +1,130 @@
 :root{
     --green: #596D48;
     --light-gray: #E5E7EB;
+    --light-blue: #f8f9fc;
+}
+@font-face {
+    font-family: NorseBold;
+    src: url(Norse-Bold.otf);
+}
+body{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.image {
+    flex: 1;
+    background: url("bcg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+}
+.image img{
+    width: 50px;
+    margin-right: 5px;
+}
+.logo{
+    color: white;
+    font-family: NorseBold;
+    font-weight: bold;
+    font-size: 50px;
+    position: absolute;
+    top: 30%;
+    background-color: rgba(0, 0, 0, .70);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+}
+.main{
+    font-family: Arial, Helvetica, sans-serif;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--light-blue)
+}
+.main p {
+    font-weight: bold;
+    margin: 10px 30px;
+}
+.main p:last-child{
+    margin-left: 40px;
+}
+.main p:last-child a{
+    color: var(--green);
+    text-decoration: none;
+}
+
+.formSection{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: white;
+    width: 100%;
+    padding: 0px 30px;
+    padding-bottom: 10px;
+    box-shadow: 0px 6px 9px -8px gray;
+    margin: 30px 0px;
+    margin-bottom: 40px;
+}
+.formSection > div {
+    flex: 1 1 50%; /* Two inputs per row */
+    margin-bottom: 10px;
+}
+label, input {
+    margin-bottom: 5px;
+    width: 90%;
+}
+label{
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+input {
+    border-radius: 5px;
+    height: 20px;
+    border: solid 1px var(--light-gray);
+    padding: 2px 10px;
+}
+
+input:focus{
+    border: 1px blue solid;
+    outline: none;
+}
+input:invalid{
+    border: 1px red solid;
+    outline: none;
+}
+form{    
+    margin-bottom: 30px;
+}
+form h3{
+    width: 100%
+}
+.btn {
+    background: var(--green);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 7px;
+    box-shadow: 5px 5px 5px -3px rgb(184, 184, 184);
+    margin-left: 40px;
+}
+#passwordError {
+    color: red;
+    font-size: 12px;
+    visibility: hidden;
+}
+@media (max-width: 768px) {
+    .formSection {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .formSection > div {
+        flex: 1 1 100%; /* Two inputs per row */
+    }
 }
